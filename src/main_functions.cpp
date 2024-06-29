@@ -49,6 +49,7 @@ void setup() {
   // Pull in only the operation implementations we need.
   static tflite::MicroMutableOpResolver<1> resolver;
   if (resolver.AddFullyConnected() != kTfLiteOk) {
+    MicroPrintf("AddFullyConnected() failed\n");
     return;
   }
 
@@ -60,7 +61,7 @@ void setup() {
   // Allocate memory from the tensor_arena for the model's tensors.
   TfLiteStatus allocate_status = interpreter->AllocateTensors();
   if (allocate_status != kTfLiteOk) {
-    MicroPrintf("AllocateTensors() failed");
+    MicroPrintf("AllocateTensors() failed\n");
     return;
   }
 
@@ -86,6 +87,7 @@ void loop() {
   int8_t x_quantized = x / input->params.scale + input->params.zero_point;
   // Place the quantized input in the model's input tensor
   input->data.int8[0] = x_quantized;
+  MicroPrintf("\nQuantized x: %d input zero point %d scale %f", (int) x_quantized, (int) input->params.zero_point, input->params.scale);
 
   // Run inference, and report any error
   TfLiteStatus invoke_status = interpreter->Invoke();
@@ -97,6 +99,7 @@ void loop() {
 
   // Obtain the quantized output from model's output tensor
   int8_t y_quantized = output->data.int8[0];
+  MicroPrintf("Quantized y: %d output zero point %d scale %f", (int) y_quantized, (int) output->params.zero_point, output->params.scale);
   // Dequantize the output from integer to floating-point
   float y = (y_quantized - output->params.zero_point) * output->params.scale;
 
