@@ -1,0 +1,250 @@
+I (29) boot: ESP-IDF 4.4.7 2nd stage bootloader
+I (29) boot: compile time 16:23:32
+I (29) boot: Multicore bootloader
+I (32) boot: chip revision: v0.0
+I (36) boot.esp32: SPI Speed      : 40MHz
+I (41) boot.esp32: SPI Mode       : DIO
+I (45) boot.esp32: SPI Flash Size : 4MB
+I (50) boot: Enabling RNG early entropy source...
+I (55) boot: Partition Table:
+I (59) boot: ## Label            Usage          Type ST Offset   Length
+I (66) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (74) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (81) boot:  2 factory          factory app      00 00 00010000 00100000
+I (89) boot: End of partition table
+I (93) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0c068h ( 49256) map
+I (119) esp_image: segment 1: paddr=0001c090 vaddr=3ffb0000 size=01c34h (  7220) load
+I (122) esp_image: segment 2: paddr=0001dccc vaddr=40080000 size=0234ch (  9036) load
+I (129) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=23898h (145560) map
+I (186) esp_image: segment 4: paddr=000438c0 vaddr=4008234c size=0ad04h ( 44292) load
+I (211) boot: Loaded app from partition at offset 0x10000
+I (211) boot: Disabling RNG early entropy source...
+I (222) cpu_start: Multicore app
+I (223) cpu_start: Pro cpu up.
+I (223) cpu_start: Starting app cpu, entry point is 0x40081b30
+I (0) cpu_start: App cpu up.
+I (241) cpu_start: Pro cpu start user code
+I (241) cpu_start: cpu freq: 160000000
+I (241) cpu_start: Application information:
+I (245) cpu_start: Project name:     espidf-arduino-wifiscan
+I (252) cpu_start: App version:      1
+I (256) cpu_start: Compile time:     Jun 29 2024 16:42:46
+I (262) cpu_start: ELF file SHA256:  e84fd6a0e1daca75...
+I (268) cpu_start: ESP-IDF:          4.4.7
+I (273) cpu_start: Min chip rev:     v0.0
+I (278) cpu_start: Max chip rev:     v3.99 
+I (282) cpu_start: Chip rev:         v0.0
+I (287) heap_init: Initializing. RAM available for dynamic allocation:
+I (294) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (300) heap_init: At 3FFB26B0 len 0002D950 (182 KiB): DRAM
+I (307) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (313) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (319) heap_init: At 4008D050 len 00012FB0 (75 KiB): IRAM
+I (327) spi_flash: detected chip: gd
+I (330) spi_flash: flash io: dio
+I (336) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (5I (53) test_app: Running s8 tests...
+Free heap: 344704 bytes
+esp_nn_add_elementwise_s8_test[0] passed
+esp_nn_add_elementwise_s8_test[1] passed
+esp_nn_add_elementwise_s8_test[2] passed
+esp_nn_add_elementwise_s8_test[3] passed
+esp_nn_add_elementwise_s8_test[4] passed
+esp_nn_add_elementwise_s8_test[5] passed
+esp_nn_add_elementwise_s8_test[6] passed
+esp_nn_add_elementwise_s8_test[7] passed
+esp_nn_add_elementwise_s8_test[8] passed
+esp_nn_add_elementwise_s8_test[9] passed
+add, c 495602 opt 483572
+Free heap: 344676 bytes
+esp_nn_mul_elementwise_s8_test[0] passed
+esp_nn_mul_elementwise_s8_test[1] passed
+esp_nn_mul_elementwise_s8_test[2] passed
+esp_nn_mul_elementwise_s8_test[3] passed
+esp_nn_mul_elementwise_s8_test[4] passed
+esp_nn_mul_elementwise_s8_test[5] passed
+esp_nn_mul_elementwise_s8_test[6] passed
+esp_nn_mul_elementwise_s8_test[7] passed
+esp_nn_mul_elementwise_s8_test[8] passed
+esp_nn_mul_elementwise_s8_test[9] passed
+mul, c 222936 opt 218956
+Free heap: 344676 bytes
+
+######## Running esp_nn_depthwise_conv_s8_test ##########
+[  0] passed [pad: (0, 0), stride: (1, 1) out: ( 16, 16), filter: (3, 3, 16), ch_mult 1]        cycles: c  2905172, opt  1392218
+[  1] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10), filter: (3, 3, 16), ch_mult 1]        cycles: c  1036265, opt   486317
+[  2] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10), filter: (3, 3, 24), ch_mult 1]        cycles: c  1554032, opt   724406
+[  3] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10), filter: (3, 3, 24), ch_mult 1]        cycles: c  1552648, opt   724463
+[  4] passed [pad: (1, 1), stride: (1, 1) out: (  6,  6), filter: (3, 3,  4), ch_mult 8]        cycles: c   680521, opt   305927
+[  5] passed [pad: (1, 1), stride: (1, 1) out: ( 12, 12), filter: (5, 5,  4), ch_mult 8]        cycles: c  5535006, opt  2331677
+[  6] passed [pad: (1, 1), stride: (1, 1) out: (  6,  6), filter: (3, 3,  4), ch_mult 4]        cycles: c   342764, opt   147945
+[  7] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2), filter: (3, 3, 16), ch_mult 1]        cycles: c    44872, opt    21982
+[8] allocations failed
+[  9] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2), filter: (3, 3, 16), ch_mult 1]        cycles: c    44859, opt    21966
+[ 10] passed [pad: (1, 1), stride: (2, 2) out: (  3,  3), filter: (3, 3, 16), ch_mult 1]        cycles: c    89130, opt    41356
+[ 11] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2), filter: (3, 3, 16), ch_mult 1]        cycles: c    44899, opt    21977
+[ 12] passed [pad: (0, 0), stride: (1, 1) out: (  4,  4), filter: (3, 3, 16), ch_mult 1]        cycles: c   180805, opt    87309
+[ 13] passed [pad: (0, 0), stride: (1, 1) out: (  4,  4), filter: (3, 3, 16), ch_mult 1]        cycles: c   180789, opt    85459
+[ 14] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2), filter: (3, 3, 16), ch_mult 1]        cycles: c    46635, opt    21988
+Free heap: 344676 bytes
+
+######## Running esp_nn_conv_s8_test ##########
+[  0] passed [pad: (0, 0), stride: (1, 1) out: ( 10, 10, 64), filter: (1, 1, 64)]       cycles: c 10584345, opt  6937932
+[  1] passed [pad: (0, 0), stride: (1, 1) out: (  4,  4,  8), filter: (1, 1, 20)]       cycles: c    91564, opt    54225
+[  2] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 64), filter: (3, 3,  3)]       cycles: c  5336912, opt  5319252
+[  3] passed [pad: (0, 0), stride: (1, 1) out: ( 10, 10, 64), filter: (1, 1,  3)]       cycles: c  2283897, opt   981133
+[  4] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10, 64), filter: (3, 3, 12)]       cycles: c 17055379, opt 13006566
+[  5] passed [pad: (0, 0), stride: (2, 2) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649833, opt   354026
+[  6] passed [pad: (0, 0), stride: (1, 1) out: (  2,  2,  8), filter: (1, 1,  8)]       cycles: c    14938, opt     7380
+[  7] passed [pad: (0, 0), stride: (2, 2) out: ( 54, 54, 16), filter: (6, 6,  3)]       cycles: c 207725183, opt 215498384
+[  8] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2, 16), filter: (6, 6,  5)]       cycles: c   382324, opt   337583
+[  9] passed [pad: (1, 1), stride: (1, 1) out: (  3,  3,  1), filter: (3, 3, 32)]       cycles: c    38217, opt    29145
+[ 10] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649880, opt   354008
+[ 11] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649968, opt   354073
+[ 12] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   651649, opt   354036
+[ 13] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   650008, opt   355803
+[ 14] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649877, opt   354034
+Free heap: 344676 bytes
+esp_nn_relu6_s8_test passed
+relu, c 24891 opt 24261
+Free heap: 344676 bytes
+esp_nn_avg_pool_s8_test passed
+avg_pool, c 1325617 opt 1317088
+Free heap: 344676 bytes
+esp_nn_max_pool_s8_test passed
+max_pool, c 1190959 opt 1186513
+Free heap: 344676 bytes
+
+######## Running esp_nn_fully_connected_s8_test ##########
+[  0] passed [row_len 271, out_ch 3]    cycles: c    30023, opt    23678
+[  1] passed [row_len 271, out_ch 3]    cycles: c    23684, opt    22420
+[  2] passed [row_len 271, out_ch 3]    cycles: c    23680, opt    22416
+[  3] passed [row_len 271, out_ch 3]    cycles: c    23687, opt    22422
+[  4] passed [row_len 1, out_ch 16]     cycles: c     3884, opt     2620
+[  5] passed [row_len 16, out_ch 8]     cycles: c     5854, opt     4590
+[  6] passed [row_len 8, out_ch 8]      cycles: c     4120, opt     2856
+[  7] passed [row_len 8, out_ch 15]     cycles: c     6558, opt     5295
+[  8] passed [row_len 8, out_ch 1]      cycles: c     1683, opt      419
+[  9] passed [row_len 7, out_ch 8]      cycles: c     3902, opt     2638
+[ 10] passed [row_len 7, out_ch 8]      cycles: c     3909, opt     2644
+[ 11] passed [row_len 5, out_ch 8]      cycles: c     3468, opt     2204
+[ 12] passed [row_len 3, out_ch 8]      cycles: c     3044, opt     1780
+[ 13] passed [row_len 7, out_ch 8]      cycles: c     3906, opt     2642
+[ 14] passed [row_len 2, out_ch 8]      cycles: c     2827, opt     1564
+Free heap: 344676 bytes
+esp_nn_softmax_s8_test passed
+softmax, c 394106 opt 234749
+Free heap: 344676 bytes
+I (3781) test_app: s8 tests done!
+
+Sleeping 10 seconds
+I (13796) test_app: Running s8 tests...
+Free heap: 344676 bytes
+esp_nn_add_elementwise_s8_test[0] passed
+esp_nn_add_elementwise_s8_test[1] passed
+esp_nn_add_elementwise_s8_test[2] passed
+esp_nn_add_elementwise_s8_test[3] passed
+esp_nn_add_elementwise_s8_test[4] passed
+esp_nn_add_elementwise_s8_test[5] passed
+esp_nn_add_elementwise_s8_test[6] passed
+esp_nn_add_elementwise_s8_test[7] passed
+esp_nn_add_elementwise_s8_test[8] passed
+esp_nn_add_elementwise_s8_test[9] passed
+add, c 483579 opt 481676
+Free heap: 344676 bytes
+esp_nn_mul_elementwise_s8_test[0] passed
+esp_nn_mul_elementwise_s8_test[1] passed
+esp_nn_mul_elementwise_s8_test[2] passed
+esp_nn_mul_elementwise_s8_test[3] passed
+esp_nn_mul_elementwise_s8_test[4] passed
+esp_nn_mul_elementwise_s8_test[5] passed
+esp_nn_mul_elementwise_s8_test[6] passed
+esp_nn_mul_elementwise_s8_test[7] passed
+esp_nn_mul_elementwise_s8_test[8] passed
+esp_nn_mul_elementwise_s8_test[9] passed
+mul, c 217246 opt 218322
+Free heap: 344676 bytes
+
+######## Running esp_nn_depthwise_conv_s8_test ##########
+[  0] passed [pad: (0, 0), stride: (1, 1) out: ( 16, 16), filter: (3, 3, 16), ch_mult 1]        cycles: c  2905147, opt  1385120
+[  1] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10), filter: (3, 3, 16), ch_mult 1]        cycles: c  1038179, opt   486340
+[  2] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10), filter: (3, 3, 24), ch_mult 1]        cycles: c  1554434, opt   722658
+[  3] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10), filter: (3, 3, 24), ch_mult 1]        cycles: c  1554159, opt   724319
+[  4] passed [pad: (1, 1), stride: (1, 1) out: (  6,  6), filter: (3, 3,  4), ch_mult 8]        cycles: c   680582, opt   290719
+[  5] passed [pad: (1, 1), stride: (1, 1) out: ( 12, 12), filter: (5, 5,  4), ch_mult 8]        cycles: c  5535300, opt  2330053
+[  6] passed [pad: (1, 1), stride: (1, 1) out: (  6,  6), filter: (3, 3,  4), ch_mult 4]        cycles: c   342747, opt   147951
+[  7] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2), filter: (3, 3, 16), ch_mult 1]        cycles: c    46642, opt    21985
+[8] allocations failed
+[  9] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2), filter: (3, 3, 16), ch_mult 1]        cycles: c    46637, opt    21993
+[ 10] passed [pad: (1, 1), stride: (2, 2) out: (  3,  3), filter: (3, 3, 16), ch_mult 1]        cycles: c    89109, opt    41346
+[ 11] passed [pad: (0, 0), stride: (1, 1) out: (  4,  4), filter: (3, 3, 16), ch_mult 1]        cycles: c   180744, opt    85457
+[ 12] passed [pad: (0, 0), stride: (1, 1) out: (  4,  4), filter: (3, 3, 16), ch_mult 1]        cycles: c   180803, opt    87246
+[ 13] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2), filter: (3, 3, 16), ch_mult 1]        cycles: c    44887, opt    21993
+[ 14] passed [pad: (0, 0), stride: (1, 1) out: (  4,  4), filter: (3, 3, 16), ch_mult 1]        cycles: c   180774, opt    87253
+Free heap: 344676 bytes 
+
+######## Running esp_nn_conv_s8_test ##########
+[  0] passed [pad: (0, 0), stride: (1, 1) out: ( 10, 10, 64), filter: (1, 1, 64)]       cycles: c 10571934, opt  6931121
+[  1] passed [pad: (0, 0), stride: (1, 1) out: (  4,  4,  8), filter: (1, 1, 20)]       cycles: c    93346, opt    52416
+[  2] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 64), filter: (3, 3,  3)]       cycles: c  5338624, opt  5311664
+[  3] passed [pad: (0, 0), stride: (1, 1) out: ( 10, 10, 64), filter: (1, 1,  3)]       cycles: c  2283704, opt   982888
+[  4] passed [pad: (1, 1), stride: (1, 1) out: ( 10, 10, 64), filter: (3, 3, 12)]       cycles: c 17053687, opt 13008345
+[  5] passed [pad: (0, 0), stride: (2, 2) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649914, opt   353979
+[  6] passed [pad: (0, 0), stride: (1, 1) out: (  2,  2,  8), filter: (1, 1,  8)]       cycles: c    14926, opt     7378
+[  7] passed [pad: (0, 0), stride: (2, 2) out: ( 54, 54, 16), filter: (6, 6,  3)]       cycles: c 207727348, opt 215497015
+[  8] passed [pad: (0, 0), stride: (2, 2) out: (  2,  2, 16), filter: (6, 6,  5)]       cycles: c   384032, opt   337570
+[  9] passed [pad: (1, 1), stride: (1, 1) out: (  3,  3,  1), filter: (3, 3, 32)]       cycles: c    38215, opt    27377
+[ 10] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649823, opt   355714
+[ 11] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649882, opt   354043
+[ 12] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649948, opt   354032
+[ 13] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649911, opt   354048
+[ 14] passed [pad: (0, 0), stride: (1, 1) out: (  8,  8, 16), filter: (1, 1, 16)]       cycles: c   649875, opt   354016
+Free heap: 344676 bytes
+esp_nn_relu6_s8_test passed
+relu, c 24891 opt 24261
+Free heap: 344676 bytes
+esp_nn_avg_pool_s8_test passed
+avg_pool, c 1323775 opt 1317868
+Free heap: 344676 bytes
+esp_nn_max_pool_s8_test passed
+max_pool, c 1192035 opt 1185874
+Free heap: 344676 bytes
+
+######## Running esp_nn_fully_connected_s8_test ##########
+[  0] passed [row_len 2, out_ch 8]      cycles: c     7256, opt     1550
+[  1] passed [row_len 2, out_ch 8]      cycles: c     2831, opt     1568
+[  2] passed [row_len 2, out_ch 8]      cycles: c     2815, opt     1552
+[  3] passed [row_len 2, out_ch 8]      cycles: c     2834, opt     1570
+[  4] passed [row_len 1, out_ch 16]     cycles: c     3891, opt     2626
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d7076  PS      : 0x00060e30  A0      : 0x800d2b44  A1      : 0x3ffbe3e0
+A2      : 0x3ffbe460  A3      : 0x00000000  A4      : 0xffffffe7  A5      : 0x3ffbe450
+A6      : 0x00000000  A7      : 0xf4e2128d  A8      : 0x0000007f  A9      : 0x00000010
+A10     : 0x00000000  A11     : 0xf1aa71b7  A12     : 0xf4e2128d  A13     : 0x00000000
+A14     : 0x824880e2  A15     : 0xc24880e1  SAR     : 0x00000006  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xf4e2128d  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff
+
+
+Backtrace: 0x400d7073:0x3ffbe3e0 0x400d2b41:0x3ffbe410 0x400d133e:0x3ffbe4a0 0x400d4fb9:0x760cc100 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: e84fd6a0e1daca75
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6652
+ho 0 tail 12 room 4
+load:0x40078000,len:15052
+load:0x40080400,len:3836
+entry 0x4008069c
+I (29) boot: ESP-IDF 4.4.7 2nd stage bootloader
