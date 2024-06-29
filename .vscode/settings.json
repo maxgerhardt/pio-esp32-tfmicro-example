@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "test_utils.h": "c"
+        "test_utils.h": "c",
+        "esp_nn_generic_opt.h": "c"
     }
 }
